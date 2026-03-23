@@ -15,7 +15,7 @@ Check out the working demo of the project:
 ## 🧰 Hardware Used
 
 * Raspberry Pi 4 Model B (8GB RAM)
-* Raspberry Pi Camera Module 
+* Raspberry Pi Camera Module
 * 15x Servo Motors
 * External 5V–6V Power Supply
 * Connecting Wires
@@ -36,7 +36,7 @@ Check out the working demo of the project:
 
 ## 🧠 How It Works
 
-```id="flow"
+```
 Webcam → MediaPipe → Landmark Detection → Angle Mapping → Servo Movement
 ```
 
@@ -49,7 +49,7 @@ Webcam → MediaPipe → Landmark Detection → Angle Mapping → Servo Movement
 
 ## 📦 Requirements
 
-```txt id="req"
+```
 opencv-python==4.9.0.80
 mediapipe>=0.10.13
 pigpio==1.78
@@ -68,7 +68,25 @@ cd roboticHand
 
 ---
 
-### 2. Install Dependencies
+### 2. Use Compatible Python Version
+
+⚠️ MediaPipe works best with:
+
+* Python ≤ 3.10
+* OR use **pyenv** to manage multiple Python versions
+
+---
+
+### 3. (Optional) Create Virtual Environment
+
+```bash
+python3.10 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -76,7 +94,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Run the Project
+### 5. Run the Project
 
 ```bash
 python arm.py
@@ -97,7 +115,7 @@ If you're testing on a PC:
 
 Use only:
 
-```txt
+```
 opencv-python
 mediapipe
 ```
@@ -141,7 +159,7 @@ sudo systemctl start pigpiod
 
 ## 📁 Project Structure
 
-```id="structure"
+```
 roboticHand/
 │── arm.py
 │── requirements.txt
